@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header{
+    height: 100px;
+    background-color: lightgray;
+    font-size: 2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 50px;
+}
+
+.search-container{
+    height: 50px;
+}
+
+.search-container *{
+    height: 100%;
+    border-radius: 7px;
+    border: 0;
+    box-shadow: 0px 0px 5px black;
+    margin: 10px;
+    outline: none;
+    transition: .25s;
+}
+
+#search{
+    width: 400px;
+    font-size: 80%;
+    text-align: center;
+}
+
+#search:hover{
+    letter-spacing: 2px;
+    box-shadow: 0px 0px 8px black;
+}
+
+.search-btn{
+    width: 100px;
+    font-size: 60%;
+    cursor: pointer;
+}
+
+.search-btn:hover{
+    background-color: white;
+    letter-spacing: 1px;
+    box-shadow: 0px 0px 8px black;
+}
+
+.main-container {
+    width: 90vw;
+    margin: 0 auto
+}
+
+.video-list *{
+    display: flex;
+    margin: 0px 30px 20px 0px;
+    align-items: center;
+}
+
+.video-list img {
+    cursor: pointer;
+    width: 300px;
+}
+
+iframe {
+    width: 1000px;
+    height: calc(1000px * 0.5625)
+}
+
+/* HELPERS */
+
+.flex {
+    display: flex;
+}
+
+.flex.space-around {
+    justify-content: space-around;
+}
+
+.flex.justify-center{
+    justify-content: center;
+}
+
+.flex.align-center{
+    align-items: center;
+}
+
+@media (max-width:1800px){
+    iframe{
+        width: 750px;
+        height: calc(750px * 0.5625)
+    }
+
+    .video-list img{
+        width: 250px;
+    }
+}
+
+@media (max-width:1500px){
+    iframe{
+        width: 600px;
+        height: calc(600px * 0.5625)
+    }
+
+    .video-list img{
+        width: 200px;
+    }
+
+    .video-list h2{
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width:1200px){
+    .main-container{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    iframe{
+        width: calc(100vw - 100px);
+        height: calc((100vw - 100px) * 0.5625);
+    }
+
+    .video-list img{
+        width: 300px;
+    }
+
+    .video-list h2{
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width:700px){
+    .video-player{
+        margin-bottom: 20px;
+    }
+
+    .video-list *{
+        flex-direction: column;
+        width: 70vw;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    .video-list * img{
+        width: 100%
+    }
+}
